@@ -1,0 +1,115 @@
+/*   La navigation desktop s'efface en dessous de 767px de large   */
+
+@media (max-width:767px) {
+    nav{display:none}
+}
+
+
+
+/*   Le burger s'affiche uniquement en dessous de 768px de large   */
+
+@media  (min-width:768px) {
+    .phone {
+        display:none;
+    }
+}
+
+
+/*  Burger -    début   */
+* {
+    box-sizing: border-box;
+  }
+  
+  .burger {
+    display: none;
+  }
+  
+  .burger:checked ~ .burger-menu {
+    display: block;
+  }
+  
+  .hamburger {
+    display:block;
+    width: 3.4em;
+    height: 2.4em;
+    line-height: .1em;
+    border: 0.1em solid black;
+    padding: 0 .4em .4em;
+  }
+  
+  .hamburger hr {
+    color: #ddd;
+    height: .1em;
+    border: 0;
+    background: black;
+    border: none;
+  }
+  
+  .burger-menu {
+     display:none;
+  }
+/*  Burger -    fin   */
+
+
+
+
+
+
+
+
+
+
+
+/*  dimensionne, espace et colorisse les sections    */
+section{
+    width: 300px;
+    height: 100px;
+    margin: 1rem;
+    background-color: #88c1d0;
+}
+
+/*   centre le conteneur   */
+figure{
+    margin:auto;
+    justify-items: center;
+}
+
+
+
+
+/*  Largeur inférieure ou égal à 767 px : disposition en 1 colonne.  */
+
+@media  (max-width:767px) {
+    figure {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+
+
+
+/*  Largeur entre 768px et 1599 px : disposition en 2 colonnes.    */
+
+@media (min-width:768px) and (max-width:1599px) {
+    figure {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+
+/*  Ecran supérieur ou égal à 1600 px de large : disposition en 1 ligne.    */
+ 
+ @media screen and (min-width:1600px) {
+    figure {
+        display: flex;
+        flex-direction: row;
+    }
+
+}
+
+

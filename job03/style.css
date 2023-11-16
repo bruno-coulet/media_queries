@@ -1,3 +1,5 @@
+
+
 /*  dimensionne, espace et colorisse les sections    */
 section{
     width: 300px;
@@ -17,7 +19,7 @@ figure{
 
 /*  Largeur inférieure ou égal à 767 px : disposition en 1 colonne.  */
 
-@media  (max-width:767px) {
+@media  (max-device-width:767px) {
     figure {
         display: flex;
         flex-direction: column;
@@ -30,7 +32,7 @@ figure{
 
 /*  Largeur entre 768px et 1599 px : disposition en 2 colonnes.    */
 
-@media (min-width:768px) and (max-width:1599px) {
+@media (min-device-width:768px) and (max-device-width:1599px) {
     figure {
         display:grid;
         grid-template-columns: 1fr 1fr;
@@ -42,7 +44,7 @@ figure{
 
 /*  Ecran supérieur ou égal à 1600 px de large : disposition en 1 ligne.    */
  
- @media screen and (min-width:1600px) {
+ @media screen and (min-device-width:1600px) {
     figure {
         display: flex;
         flex-direction: row;
