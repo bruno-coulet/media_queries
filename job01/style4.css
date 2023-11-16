@@ -1,0 +1,6 @@
+
+/*   Style actif pour écrans de moins de 1280 pixels de large   */
+
+@media  screen AND (max-width:1279px) {
+    body {background-color: #fff;}
+}

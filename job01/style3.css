@@ -1,0 +1,5 @@
+/*   Style actif pour écrans entre 1280 et 1679 pixels de large   */
+
+@media  (min-width:1280px) AND (max-width:1679px) {
+    body {background-color: #275fa0;}
+}
