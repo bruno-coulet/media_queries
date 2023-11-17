@@ -1,8 +1,18 @@
-/*  Centre la navigation desktop    */
-nav.desktop ul{
+body {
+    margin: 0;
+}
+
+header, nav {
+    width: 100%;
+}
+
+/*  Centre la navigation  */
+nav ul{
     display: flex;
-    margin: auto;
-    width: fit-content;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+
 }
 /*  Elements de la navigation    */
 li{
@@ -10,25 +20,12 @@ li{
     list-style-type: none;
 }
 
-/*   La navigation desktop s'affiche uniquement au dela de 767px de large   */
 
-@media (max-device-width:767px) {
-    nav.desktop{display:none}
-}
 
 
 
     
 /*  Burger -    début   */
-
-/*   Le burger s'affiche uniquement en dessous de 768px de large   */
-
-@media  (min-device-width:768px) {
-    nav.phone {
-        display:none;
-    }
-}
-
 
 * {
     box-sizing: border-box;
@@ -58,69 +55,48 @@ li{
     border: none;
   }
   
-  .burger-menu {
-     display:none;
-  }
+
 /*  Burger -    fin   */
 
 
+/*   La navigation  s'affiche en linge au dela de 767px de large   */
 
 
-
-
-
-
-
-
-
-/*  dimensionne, espace et colorisse les sections    */
-section{
-    width: 300px;
-    height: 100px;
-    margin: 1rem;
-    background-color: #88c1d0;
+.burger:checked ~ ul {
+    display: flex;
 }
 
-/*   centre le conteneur   */
-figure{
-    margin:auto;
-    justify-items: center;
-    width:fit-content;
+/*   Le burger s'affiche uniquement en dessous de 768px de large   */
+@media (min-device-width:768px) {
+
+    .hamburger{display:none}
+
+    .burger {display:none;}
+
+    /* nav ul {
+        width: 70vw;
+
+    } */
+
+    ul {
+        display: none;
+      }
+      
+
+
 }
 
 
 
 
-/*  Largeur inférieure ou égal à 767 px : disposition en 1 colonne.  */
+/*   Au dela de 768px de large la liste est en colonne  */
+@media (max-device-width:767px) {
 
-@media  (max-device-width:767px) {
-    figure {
-        display: flex;
-        flex-direction: column;
+    nav ul{ 
+        flex-direction:column; 
+        display: none;
+        margin:0;
+        width:auto;  
+     }
+     
     }
-
-}
-
-
-/*  Largeur entre 768px et 1599 px : disposition en 2 colonnes.    */
-
-@media (min-device-width:768px) and (max-device-width:1599px) {
-    figure {
-        display:grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-}
-
-
-/*  Ecran supérieur ou égal à 1600 px de large : disposition en 1 ligne.    */
- 
- @media screen and (min-device-width:1600px) {
-    figure {
-        display: flex;
-        flex-direction: row;
-    }
-
-}
-
-
