@@ -1,11 +1,3 @@
-body {
-    margin: 0;
-}
-
-header, nav {
-    width: 100%;
-}
-
 /*  Centre la navigation  */
 nav ul{
     display: flex;
@@ -31,13 +23,14 @@ li{
     box-sizing: border-box;
   }
   
-  .burger {
+  .burger {                     /*  par défaut la ul n'est pas affichée, il faut cliquer pour l'afficher */
     display: none;
   }
-  .burger:checked ~ .burger-menu {
-    display: block;
-  }
-  
+
+  .burger:checked ~ ul {        /*  check, la ul s'affiche */
+    display: flex;
+}
+
   .hamburger {
     display:block;
     width: 3.4em;
@@ -55,48 +48,37 @@ li{
     border: none;
   }
   
-
-/*  Burger -    fin   */
-
-
-/*   La navigation  s'affiche en linge au dela de 767px de large   */
-
-
-.burger:checked ~ ul {
-    display: flex;
-}
-
-/*   Le burger s'affiche uniquement en dessous de 768px de large   */
+/*   Le burger ne s'affiche pas sur écran large   */
 @media (min-device-width:768px) {
 
     .hamburger{display:none}
 
     .burger {display:none;}
 
-    /* nav ul {
-        width: 70vw;
-
-    } */
-
     ul {
         display: none;
       }
-      
-
-
+    
 }
 
 
 
 
-/*   Au dela de 768px de large la liste est en colonne  */
+/*   Le burger s'affiche sur petit écran    */
+
 @media (max-device-width:767px) {
 
     nav ul{ 
-        flex-direction:column; 
-        display: none;
+        flex-direction:column; /*  la liste est en colonne sur petit écran */
+        display: none;         /*  par défaut la ul n'est pas affichée, il faut cliquer pouur l'afficher */
         margin:0;
         width:auto;  
      }
      
     }
+
+
+
+/*  Burger -    fin   */
+
+
