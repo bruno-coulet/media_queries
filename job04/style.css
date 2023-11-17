@@ -6,7 +6,7 @@ nav ul{
     padding: 0;
 
 }
-/*  Elements de la navigation    */
+/*  Organise les élements de la navigation    */
 li{
     width: 7rem;
     list-style-type: none;
@@ -23,11 +23,11 @@ li{
     box-sizing: border-box;
   }
   
-  .burger {                     /*  par défaut la ul n'est pas affichée, il faut cliquer pour l'afficher */
+  .burger {                     /*  la checkbox n'est pas affichée, on peut cliquer dessus pour afficher la ul */
     display: none;
   }
 
-  .burger:checked ~ ul {        /*  check, la ul s'affiche */
+  .burger:checked ~ ul {        /*  clic sur la checkbox, la ul s'affiche */
     display: flex;
 }
 
@@ -49,17 +49,7 @@ li{
   }
   
 /*   Le burger ne s'affiche pas sur écran large   */
-@media (min-device-width:768px) {
-
-    .hamburger{display:none}
-
-    .burger {display:none;}
-
-    ul {
-        display: none;
-      }
-    
-}
+@media (min-device-width:768px) { .hamburger{display:none} }
 
 
 
@@ -70,7 +60,7 @@ li{
 
     nav ul{ 
         flex-direction:column; /*  la liste est en colonne sur petit écran */
-        display: none;         /*  par défaut la ul n'est pas affichée, il faut cliquer pouur l'afficher */
+        display: none;         /*  par défaut la ul n'est pas affichée, il faut cliquer pour l'afficher */
         margin:0;
         width:auto;  
      }
