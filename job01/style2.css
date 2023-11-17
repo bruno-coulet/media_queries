@@ -1,5 +1,1 @@
-/*   Style actif pour écrans entre 1680 et 1919 pixels de large   */
-
-@media  (min-width:1680px) and (max-width:1919px) {
-    body {background-color: #ffca4b;}
-}
+body {background-color: #ffca4b;}

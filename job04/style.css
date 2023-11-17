@@ -18,6 +18,9 @@ li{
 
 
 
+    
+/*  Burger -    début   */
+
 /*   Le burger s'affiche uniquement en dessous de 768px de large   */
 
 @media  (min-device-width:768px) {
@@ -27,7 +30,6 @@ li{
 }
 
 
-/*  Burger -    début   */
 * {
     box-sizing: border-box;
   }
@@ -35,7 +37,6 @@ li{
   .burger {
     display: none;
   }
-  
   .burger:checked ~ .burger-menu {
     display: block;
   }
